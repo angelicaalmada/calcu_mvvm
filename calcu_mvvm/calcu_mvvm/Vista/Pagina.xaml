@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="calcu_mvvm.Vista.Pagina"
+             xmlns:local="clr-namespace:calcu_mvvm.ViewModel">
+    <StackLayout Padding="20">
+        <Frame BackgroundColor="White" Padding="15" Margin="0,0,0,20">
+            <Label x:Name="LblResult"  Text="{Binding Resultado}" FontSize="60" TextColor="Black"
+           FontAttributes="Bold" HorizontalOptions="End"></Label>
+        </Frame>
+        <Grid VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <!--1 row-->
+
+            <Button Grid.Row="0" Grid.Column="0" Text="C" FontSize="Large" FontAttributes="None"
+            CornerRadius="5" TextColor="#246ffe" BackgroundColor="#fff" x:Name="BtnClear"
+            Command="{Binding ClearCommand}" BorderColor="#fff"/>
+            <Button Grid.Row="0" Grid.Column="3" Text="⌫" FontSize="Large" FontAttributes="None" BorderColor="#fff" 
+                CornerRadius="5" TextColor="#246ffe" BackgroundColor="#fff" x:Name="BtnX" Command="{Binding BtnXCommand}"/>
+            <Button Grid.Row="4" Grid.Column="0" Text="%" FontSize="Large" FontAttributes="None"
+                BorderColor="#fff" CornerRadius="5" TextColor="#246ffe" BackgroundColor="#fff"
+                 x:Name="BtnPercentage" Command="{Binding BtnPorcentajeCommand}"/>
+            <Button  Grid.Row="0" Grid.Column="1" Text="÷" FontSize="Large" FontAttributes="None" BorderColor="#fff"
+                CornerRadius="5" TextColor="#246ffe" BackgroundColor="#fff" Command="{Binding BtnDivCommand}"/>
+
+            <!--2 no row-->
+            <Button Grid.Row="1" Grid.Column="0" Text="1" FontSize="Large" FontAttributes="None"
+                BorderColor="Black" CornerRadius="5" TextColor="Black" BackgroundColor="White"
+                x:Name="BtnOne" Command="{Binding BtnUnoCommand}"/>
+            <Button Grid.Row="1" Grid.Column="1" Text="2" FontSize="Large" FontAttributes="None" BorderColor="Black"
+                CornerRadius="5" TextColor="Black" BackgroundColor="White" Command="{Binding BtnDosCommand}"/>
+            <Button Grid.Row="1" Grid.Column="2" Text="3" FontSize="Large" FontAttributes="None"
+                BorderColor="Black" CornerRadius="5" TextColor="Black" BackgroundColor="White" Command="{Binding BtnTresCommand}"/>
+            <Button Grid.Row="0"  Grid.Column="2" Text="X" FontSize="Large" FontAttributes="None" BorderColor="#fff"
+                CornerRadius="5" TextColor="#246ffe" BackgroundColor="#fff" Command="{Binding BtnMultCommand}" />
+
+
+            <!--3 no row-->
+            <Button Grid.Row="2" Grid.Column="0" Text="4" FontSize="Large" FontAttributes="None" BorderColor="Black"
+                CornerRadius="5" TextColor="Black" BackgroundColor="White" Command="{Binding BtnCuatroCommand}"/>
+            <Button Grid.Row="2" Grid.Column="1" Text="5" FontSize="Large" FontAttributes="None" BorderColor="Black"
+                CornerRadius="5" TextColor="Black" BackgroundColor="White" Command="{Binding BtnCincoCommand}"/>
+            <Button Grid.Row="2" Grid.Column="2" Text="6" FontSize="Large" FontAttributes="None" BorderColor="Black"
+                CornerRadius="5" TextColor="Black" BackgroundColor="White" Command="{Binding BtnSeisCommand}"/>
+            <Button Grid.Row="1" Grid.Column="3" Text="-" FontSize="Large" FontAttributes="None" BorderColor="#fff" 
+                CornerRadius="5" TextColor="#246ffe" BackgroundColor="#fff" Command="{Binding BtnRestaCommand}"/>
+            <!--4 no row-->
+            <Button Grid.Row="3" Grid.Column="0" Text="7" FontSize="Large" FontAttributes="None" BorderColor="Black"
+                CornerRadius="5" TextColor="Black" BackgroundColor="White" Command="{Binding BtnSieteCommand}"/>
+            <Button Grid.Row="3" Grid.Column="1" Text="8" FontSize="Large" FontAttributes="None" BorderColor="Black" 
+                CornerRadius="5" TextColor="Black" BackgroundColor="White" Command="{Binding BtnOchoCommand}"/>
+            <Button Grid.Row="3" Grid.Column="2" Text="9" FontSize="Large" FontAttributes="None" BorderColor="Black"
+                CornerRadius="5" TextColor="Black" BackgroundColor="White" Command="{Binding BtnNueveCommand}"/>
+            <Button Grid.Row="2" Grid.Column="3" Text="+" FontSize="Large" FontAttributes="Bold" BorderColor="#246ffe"
+                CornerRadius="15" TextColor="#246ffe" BackgroundColor= "White" Command="{Binding BtnSumCommand}"/>
+            <!--5 no row-->
+            <Button Grid.Row="4" Grid.Column="2" Text="." FontSize="Large" FontAttributes="None" BorderColor="Black" 
+                CornerRadius="5" TextColor="Black" BackgroundColor="White"  Command="{Binding BtnPuntoCommand}"/>
+
+            <Button Grid.Row="4"  Grid.Column="1" Text="0" FontSize="Large" FontAttributes="None" BorderColor="Black"
+                CornerRadius="5" TextColor="Black" BackgroundColor="White" Command="{Binding BtnCeroCommand}"/>
+
+            <Button Grid.Row="3" Grid.Column="3" Grid.RowSpan="2" Text="=" FontSize="Large" FontAttributes="None" BorderColor="#246ffe"
+                CornerRadius="5" TextColor="White" BackgroundColor="#246ffe" Command="{Binding BtnIguallCommand}"/>
+
+        </Grid>
+
+
+
+    </StackLayout>
+
+</ContentPage>
